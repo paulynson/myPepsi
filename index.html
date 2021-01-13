@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Page Title</title>
+  <head>
+    <meta charset="utf-8" />
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Page Title</title>
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
 
-<style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
 
-/* :root {
+      /* :root {
   --text-font: 'Lato', sans-serif;
   --title-font: 'Merriweather', serif;
   --bg-color: #222831;
@@ -32,157 +42,174 @@
 
 } */
 
-.image{
-    width: 100px !important;
-    height: auto;
+      .image {
+        width: 100px !important;
+        height: auto;
+      }
+      a:hover {
+        color: #004b93 !important;
+      }
 
-}
-a:hover{
-    color: #004B93 !important;
-}
+      a.active {
+        color: #005cb4 !important;
+      }
 
-a.active{
-    color: #005CB4 !important;
-}
+      svg:hover {
+        color: #00ff00;
+        transition: 0.3s ease-in-out;
+      }
 
-svg:hover{
-    color: #00ff00;
-    transition: 0.3s ease-in-out;
-  }
+      @media (max-width: 768px) {
+        a {
+          font-size: 14px !important;
+          font-family: cursive;
+        }
 
-@media(max-width: 768px){
-a{
-    font-size: 14px !important;
-    font-family: cursive;
-}
+        .navbar-brand {
+          display: none !important;
+        }
 
-.navbar-brand{
-    display: none !important;
-}
+        a:hover {
+          text-decoration: underline;
+          color: #004b93 !important;
+          animation-name: act;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
 
-a:hover{
-    text-decoration: underline;
-    color: #004B93 !important;
-    animation-name: act;
-   animation-duration: 1s;
-   animation-iteration-count: infinite;
-}
+        a:hover {
+          color: #004b93 !important;
+        }
 
-a:hover{
-    color: #004B93 !important;
-}
+        a.active {
+          color: #005cb4 !important;
+        }
 
-a.active{
-    color: #005CB4 !important;
-}
+        @keyframes act {
+          0% {
+            transform: rotate(45deg);
+          }
 
-@keyframes act {
-   0%{
-    transform: rotate(45deg);
-   } 
+          50% {
+            transform: rotate(60deg);
+          }
 
-   50%{
-    transform: rotate(60deg);
-   } 
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
 
-   100%{
-    transform: rotate(360deg);
-   } 
+      #preloader {
+        /* background: var(--bg-color); */
+        background: #222831;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+      }
 
+      .status {
+        background: url(../assets/image/preloader.gif);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -140px;
+        margin-top: -117px;
+      }
 
-}
-
-}
-
-#preloader {
-  /* background: var(--bg-color); */
-  background: #222831;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-}
-
-.status {
-  background: url(../assets/image/preloader.gif);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -140px;
-  margin-top: -117px;
-}
-
-body {
- background-color: black;
-  text-align: center;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
-</head>
-<body>
-
-  <!-- <div id="preloader" class="preloader">
+      body {
+        background-color: black;
+        text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="preloader" class="preloader">
       <div class="status"></div>
     </div> -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
-        <div class="container-fluid d-flex justify-content-center text-center">
-         
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="">
-                <svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="34" height="2" fill="#C4C4C4"/>
-                <rect x="5" y="4" width="29" height="2" fill="#C4C4C4"/>
-                <rect x="10" y="8" width="24" height="2" fill="#C4C4C4"/>
-                </svg>
-            </span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav me-4 mb-2 mb-lg-0">
-              <li class="nav-item mr-auto p-2">
-                <a class="nav-link active ml-3 " aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item mr-auto p-2">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              </ul>
-<div>
-              <a class="navbar-brand mr-auto p-2" href="#"><img src="assets/image/logo.png" alt="" class="img-fluid image"></a>
-            </div>
-
-            <ul class="navbar-nav me-4 mb-2 mb-lg-0">
-              <li class="nav-item mr-auto p-2">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item mr-auto p-2">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
+      <div class="container-fluid d-flex justify-content-center text-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="">
+            <svg
+              width="34"
+              height="10"
+              viewBox="0 0 34 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="34" height="2" fill="#C4C4C4" />
+              <rect x="5" y="4" width="29" height="2" fill="#C4C4C4" />
+              <rect x="10" y="8" width="24" height="2" fill="#C4C4C4" />
+            </svg>
+          </span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+            <li class="nav-item mr-auto p-2">
+              <a class="nav-link active ml-3" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item mr-auto p-2">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+          </ul>
+          <div>
+            <a class="navbar-brand mr-auto p-2" href="#"
+              ><img src="assets/image/logo.png" alt="" class="img-fluid image"
+            /></a>
           </div>
+
+          <ul class="navbar-nav me-4 mb-2 mb-lg-0">
+            <li class="nav-item mr-auto p-2">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item mr-auto p-2">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <p class="center">
-        Hello World
+      Hello World
     </p>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
 
     <script>
-
-        $(window).on("load", function () {
-          $(".status").fadeOut();
-          $("#preloader").delay(100).fadeOut();
-        });
-        
-        </script>
-        
-
-</body>
+      $(window).on("load", function () {
+        $(".status").fadeOut();
+        $("#preloader").delay(100).fadeOut();
+      });
+    </script>
+  </body>
 </html>
