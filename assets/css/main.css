@@ -21,9 +21,15 @@
 } */
 
 .image {
-  width: 100px !important;
+  width: 60px !important;
   height: auto;
 }
+
+.image:hover {
+  transform: rotate(360deg);
+  transition: 0.2s ease;
+}
+
 a:hover {
   color: #004b93 !important;
 }
