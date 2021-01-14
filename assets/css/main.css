@@ -119,3 +119,29 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* bootstrap overright */
+
+label {
+  text-align: left !important;
+}
+
+/* icon section */
+.bi {
+  color: #ffffff !important;
+  font-size: 24px !important;
+  cursor: pointer;
+}
+
+.bi:hover {
+  color: #c9002b !important;
+  transition: 0.3s ease;
+  /* transform: rotate(280deg); */
+  transform: scale(1.1);
+}
+
+.bi-linkedin {
+  transition: 0.3s ease;
+  /* transform: rotate(280deg); */
+  transform: scale(1.2);
+}
