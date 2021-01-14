@@ -38,8 +38,8 @@ a.active {
   color: #005cb4 !important;
 }
 
-bi-list-task:hover {
-  color: #00ff00;
+.bi-list-task:hover {
+  color: #004b93 !important;
   transition: 0.3s ease-in-out;
 }
 
@@ -133,15 +133,13 @@ label {
   cursor: pointer;
 }
 
-.bi:hover {
+.bi-linkedin:hover,
+.bi-facebook:hover,
+.bi-instagram:hover,
+.bi-twitter:hover,
+.bi-youtube:hover {
   color: #c9002b !important;
   transition: 0.3s ease;
   /* transform: rotate(280deg); */
   transform: scale(1.1);
-}
-
-.bi-linkedin {
-  transition: 0.3s ease;
-  /* transform: rotate(280deg); */
-  transform: scale(1.2);
 }
