@@ -38,7 +38,7 @@ a.active {
   color: #005cb4 !important;
 }
 
-svg:hover {
+bi-list-task:hover {
   color: #00ff00;
   transition: 0.3s ease-in-out;
 }
